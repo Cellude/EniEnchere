@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	data-th-replace="~{layout:: layout(
+					titrePage=~{:: title},
+					contenuPage=~{:: main},
+					linkcss=~{}
+					)}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Se connecter</title>
+</head>
+<body>
+    <main>
+    <form action="post">
+    <label for="identifiant" id="identifiantInput">Identifiant</label>
+    <input type="text">
+    <label for="">Mot de passe</label>
+    <input type="password" name="motDePasse" id="motDePasseInput">
+    <button id="connexion" type="submit">Connexion</button>
+  
+    <button id="creerUnCompte" type="submit">Créer un compte</button>
+     </form>
+    </main>
+</body>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+</html>
