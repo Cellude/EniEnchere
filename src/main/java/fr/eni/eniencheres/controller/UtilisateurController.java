@@ -24,7 +24,7 @@ public class UtilisateurController {
 	public String creerUtilisateur(Model model) {
 		var utilisateur = new Utilisateur();
 		model.addAttribute("utilisateur", utilisateur);
-		model.addAttribute("utilisateur", utilisateurManager.creerUtilisateur(utilisateur));
+//		model.addAttribute("utilisateur", utilisateurManager.creerUtilisateur(utilisateur));
 		return "view-profil-creer";
 		
 		

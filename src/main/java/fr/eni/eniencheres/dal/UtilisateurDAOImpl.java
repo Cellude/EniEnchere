@@ -15,7 +15,7 @@ import fr.eni.eniencheres.bo.Utilisateur;
 public class UtilisateurDAOImpl implements UtilisateurDAO {
 	// Dependance avec l'autowired
 	@Autowired
-	NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+	NamedParameterJdbcTemplate namedParameterJdbcTemplate; //cucucucu
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 
