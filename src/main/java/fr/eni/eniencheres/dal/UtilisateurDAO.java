@@ -1,7 +1,9 @@
 package fr.eni.eniencheres.dal;
 
-import fr.eni.eniencheres.bo.Utilisateur;
+import org.springframework.stereotype.Repository;
 
+import fr.eni.eniencheres.bo.Utilisateur;
+@Repository
 public interface UtilisateurDAO {
 	public void creerUtilisateur(Utilisateur utilisateur);
 	public Utilisateur consulterUtilisateur(String email);

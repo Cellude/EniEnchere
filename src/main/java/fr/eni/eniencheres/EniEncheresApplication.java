@@ -1,6 +1,5 @@
 package fr.eni.eniencheres;
 
-import java.applet.AppletContext;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,10 +16,11 @@ public class EniEncheresApplication {
 		
 		
 		
-		UtilisateurManager utilisateurManager = (UtilisateurManager) context.getBean("utilisateurManager");
+		UtilisateurManager utilisateurManager = (UtilisateurManager) context.getBean("utilisateurManagerImpl");
 		//A FAIRE CREE UTILISATEUR
+		Utilisateur utilisateur = new Utilisateur (1,"Pseudo","Nom","Prenom","email","telephone","rue","codepostal","ville","motdepasse",0,true);
 		
-		//utilisateurManager.creerUtilisateur(new Utilisateur utilisateur(4,"Pseudo","Nom","Prenom","email","telephone","rue","codepostal","ville","motdepasse",0,true));
+		utilisateurManager.creerUtilisateur(utilisateur);
 	}
 
 }

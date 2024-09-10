@@ -1,7 +1,9 @@
 package fr.eni.eniencheres.bll;
 
-import fr.eni.eniencheres.bo.Utilisateur;
+import org.springframework.stereotype.Service;
 
+import fr.eni.eniencheres.bo.Utilisateur;
+@Service
 public interface UtilisateurManager {
 	public void creerUtilisateur(Utilisateur utilisateur);
 	public Utilisateur consulterUtilisateur(String email);

@@ -7,18 +7,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import fr.eni.eniencheres.bo.Utilisateur;
-
+@Repository
 public class UtilisateurDAOImpl implements UtilisateurDAO {
 	// Dependance avec l'autowired
+	@Autowired
+	NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 
 	@Override
 	public void creerUtilisateur(Utilisateur utilisateur) {
-		var sql = "INSERT INTO UTILISATEURS (pseudo, nom, email, telephone, rue, code_postal, ville, mot_de_passe, credit, administrateur) VALUES ('?','?','?','?','?','?','?','?','?',?, ?);";
+		var sql = "INSERT INTO UTILISATEURS (pseudo, nom, prenom, email, telephone, rue, code_postal, ville, mot_de_passe,credit,administrateur) VALUES (:pseudo,:nom,:prenom,:email,:telephone,:rue,:code_postal,:ville,:mot_de_passe,:credit, :administrateur)";
 		MapSqlParameterSource namedParameters = new MapSqlParameterSource();
+	//	namedParameters.addValue("no_utilisateur", utilisateur.getNoUtilisateur());//Impossible d'insérer une valeur dans la colonne identité quand IDENTITY_INSERT est défini à OFF.
 		namedParameters.addValue("pseudo", utilisateur.getPseudo());
 		namedParameters.addValue("nom", utilisateur.getNom());
 		namedParameters.addValue("prenom", utilisateur.getPrenom());
@@ -30,7 +35,7 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
 		namedParameters.addValue("mot_de_passe", utilisateur.getMotDePasse());
 		namedParameters.addValue("credit", utilisateur.getCredit());
 		namedParameters.addValue("administrateur", utilisateur.getAdministateur());
-		jdbcTemplate.update(sql, namedParameters);
+		namedParameterJdbcTemplate.update(sql, namedParameters);
 
 	}
 
@@ -62,6 +67,7 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
 			Utilisateur u = new Utilisateur();
 			u.setPseudo(rs.getString("PSEUDO"));
 			u.setNom(rs.getString("NOM"));
+			u.setPrenom(rs.getString("PRENOM"));
 			u.setEmail(rs.getString("EMAIL"));
 			u.setTelephone(rs.getString("TELEPHONE"));
 			u.setRue(rs.getString("RUE"));
@@ -69,6 +75,7 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
 			u.setVille(rs.getString("VILLE"));
 			u.setMotDePasse(rs.getString("MOT_DE_PASSE"));
 			u.setCredit(rs.getInt("CREDIT"));
+			u.setAdministateur(rs.getBoolean("ADMINISTRATEUR"));
 			return u;
 
 		}
