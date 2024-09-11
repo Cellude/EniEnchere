@@ -23,7 +23,7 @@ public class UtilisateurController {
 
     // Affichage de la page index.html
     @GetMapping("/")
-    public String index() {
+    public String index() { //;;;; TESTDELAVERSION HEHEZRH
         return "index";  // Le nom de la vue sans l'extension .html
     }
 

@@ -1,6 +1,6 @@
 package fr.eni.eniencheres.bo;
 
-public class Utilisateur {
+public class Utilisateur { // test version AHUZEFHEF
 	private Integer noUtilisateur;
 	private String pseudo;
 	private String nom;
@@ -42,7 +42,7 @@ public class Utilisateur {
 		this.codePostal = codePostal;
 		this.motDePasse = motDePasse;
 		this.nom = nom;
-		this.email = email;
+		this.email = email; //??
 		this.rue = rue;
 		this.ville = ville;
 		this.credit = credit;
