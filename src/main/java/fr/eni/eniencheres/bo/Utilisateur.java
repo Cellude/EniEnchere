@@ -20,8 +20,7 @@ public class Utilisateur {
 		// TODO Auto-generated constructor stub
 	}
 	
-	
-	/** Constructeur pour la creation d'un utilisateur
+	/**Constructeur pour la creation d'un utilisateur
 	 * @param pseudo
 	 * @param nom
 	 * @param prenom
@@ -31,22 +30,24 @@ public class Utilisateur {
 	 * @param codePostal
 	 * @param ville
 	 * @param motDePasse
+	 * @param credit
+	 * @param administateur
 	 */
-	public Utilisateur(String pseudo, String nom, String prenom, String email, String telephone, String rue,
-			String codePostal, String ville, String motDePasse) {
+	public Utilisateur(String pseudo,String prenom,String telephone, String codePostal, String motDePasse, String nom, String email, String rue,
+			 String ville, Integer credit, Boolean administateur) {
 		super();
 		this.pseudo = pseudo;
-		this.nom = nom;
 		this.prenom = prenom;
-		this.email = email;
 		this.telephone = telephone;
-		this.rue = rue;
 		this.codePostal = codePostal;
-		this.ville = ville;
 		this.motDePasse = motDePasse;
+		this.nom = nom;
+		this.email = email;
+		this.rue = rue;
+		this.ville = ville;
+		this.credit = credit;
+		this.administateur = administateur;
 	}
-
-
 
 	/**
 	 * @param noUtilisateur

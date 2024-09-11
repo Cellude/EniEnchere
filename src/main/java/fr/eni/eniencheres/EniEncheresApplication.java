@@ -16,11 +16,12 @@ public class EniEncheresApplication {
 		
 		
 		
-		UtilisateurManager utilisateurManager = (UtilisateurManager) context.getBean("utilisateurManagerImpl");
-		//A FAIRE CREE UTILISATEUR
-		Utilisateur utilisateur = new Utilisateur (1,"Pseudo","Nom","Prenom","email","telephone","rue","codepostal","ville","motdepasse",0,true);
-		
-		utilisateurManager.creerUtilisateur(utilisateur);
-	}
+//		UtilisateurManager utilisateurManager = (UtilisateurManager) context.getBean("utilisateurManagerImpl");
+//		//A FAIRE CREE UTILISATEUR
+//		Utilisateur utilisateur = new Utilisateur (1,"Pseudo","Nom","Prenom","email","telephone","rue","codepostal","ville","motdepasse",0,true);
+//		
+//		utilisateurManager.creerUtilisateur(utilisateur);
+//	}
 
+	}
 }

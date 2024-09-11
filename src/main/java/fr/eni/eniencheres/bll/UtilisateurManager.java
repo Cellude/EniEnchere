@@ -9,4 +9,5 @@ public interface UtilisateurManager {
 	public Utilisateur consulterUtilisateur(String email);
 	public Utilisateur modifierUtilisateur (Utilisateur utilisateur);
 	public void supprimerUtilisateur(Utilisateur utilisateur);
+	public void save(Utilisateur utilisateur);
 }
