@@ -1,5 +1,6 @@
 package fr.eni.eniencheres.bo;
 
+
 public class Utilisateur { // test version AHUZEFHEF
 	private Integer noUtilisateur;
 	private String pseudo;

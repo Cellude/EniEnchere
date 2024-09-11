@@ -15,25 +15,25 @@
     <form method="post" data-th-action="@{/inscription}" data-th-object="${utilisateur}">
         <ul>
         <li><label for="pseudo">Pseudo</label></li>
-        <li><input type="text" placeholder="Pseudo" id="pseudoInput" name="pseudo" data-th-value="*{pseudo}"></li>
+        <li><input type="text" placeholder="Pseudo" id="pseudoInput" data-th-field="*{pseudo}"></li>
         <li><label for="prenom">Prenom</label></li>
-        <li><input type="text"placeholder="Prenom" id="prenomInput" name="prenom" data-th-value="*{prenom}"></li>
+        <li><input type="text"placeholder="Prenom" id="prenomInput" data-th-field="*{prenom}"></li>
         <li><label for="telephone">Telephone</label></li>
-        <li><input type="number"placeholder="Téléphone" id="telephoneInput" name="telephone" data-th-value="*{telephone}"></li>
+        <li><input type="number"placeholder="Téléphone" id="telephoneInput"  data-th-field="*{telephone}"></li>
         <li><label for="codePostal">Code Postal</label></li>
-        <li><input type="number" placeholder="Code Postal" id="codePostalInput" name="codepostal" data-th-value="*{codePostal}"></li>
+        <li><input type="number" placeholder="Code Postal" id="codePostalInput" data-th-field="*{codePostal}"></li>
         <li><label for="password">Mot de passe</label></li>
-        <li><input type="password" placeholder="Mot de passe" id="motDePasseInput" name="password" data-th-value="*{motDePasse}"> </li>
+        <li><input type="password" placeholder="Mot de passe" id="motDePasseInput"  data-th-field="*{motDePasse}"> </li>
         <li><label for="Nom"></label>Nom</li>
-        <li><input type="text" placeholder="Nom" id="nomInput" name="nom" data-th-value="*{nom}"></li>
+        <li><input type="text" placeholder="Nom" id="nomInput" data-th-field="*{nom}"></li>
         <li><label for="email"></label>E-mail</li>
-        <li><input type="email" placeholder="koko@gmail.com" id="emailInput" name="email" data-th-value="*{email}" ></li>
+        <li><input type="email" placeholder="koko@gmail.com" id="emailInput" data-th-field="*{email}" ></li>
         <li><label for="rue"></label>Rue</li>
-        <li><input type="text"placeholder="Rue" id="rueInput" name="rue" data-th-value="*{rue}"></li>
+        <li><input type="text"placeholder="Rue" id="rueInput" data-th-field="*{rue}"></li>
         <li><label for="ville"></label>Ville</li>
-        <li><input type="text"placeholder="Ville" id="villeInput" name="ville" data-th-value="*{ville}"></li>
+        <li><input type="text"placeholder="Ville" id="villeInput" data-th-field="*{ville}"></li>
         <li><label for="confirmPassword">Confirmation</label></li>
-        <li><input type="password"  id="confirmMotDePasseInput" name="rmotDePasse" data-th-value="*{motDePasse}"></li> //rer
+        <li><input type="password"  id="confirmMotDePasseInput" data-th-field="*{motDePasse}"></li> 
         <button id="creer" type="submit" value="Creer">Créer</button>
         <button id="annuler" type="reset">Annuler</button>
     </ul>
