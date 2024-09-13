@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import fr.eni.eniencheres.bll.CategorieManager;
 import fr.eni.eniencheres.bll.UtilisateurManager;
 import fr.eni.eniencheres.bo.Utilisateur;
 
@@ -22,8 +23,12 @@ public class EniEncheresApplication {
 //		
 //		utilisateurManager.creerUtilisateur(utilisateur);
 //	}
-
+	
+		
+		
+	
 	
 }
+
 	
 }

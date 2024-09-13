@@ -189,6 +189,7 @@ public class Article {
 				+ miseAPrix + ", prixVente=" + prixVente + ", etatVente=" + etatVente + ", utilisateur=" + utilisateur
 				+ ", retrait=" + retrait + ", categorie=" + categorie + "]";
 	}
+
 	
 
 }

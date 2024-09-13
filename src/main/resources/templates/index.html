@@ -1,10 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	data-th-replace="~{layout:: layout(
+					titrePage=~{:: title},
+					contenuPage=~{:: main},
+					linkcss=~{}
+					)}">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
 </head>
 <body>
-<h1> COUCOUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU</h1> //eerer
-</body>
+   
+    <header>
+    	<nav>
+    	
+<!--     	a REVOIR -->
+<!--     		<ul> -->
+<!--     			<li><a href="/view-connecter.html" data-th-href="@{/connexion}">S'inscrire - Se connecter</a></li> -->
+<!--     		</ul> -->
+    	</nav>
+    </header>
+    <main> 
+    		<h1>Liste des enchères</h1>
+    		
+   			<h2>Filtres :</h2>
+   			
+   			<form action="/index" method="get"> 
+ 			<input type="search" name="nomArticle" placeholder="Le nom de l'article contient"/>
+			
+    			<label for="selectCategorie" data-th-object = ${categorie}>Catégorie :</label> 
+     				<select name="selectCategorie" id="selectCategorie"> 
+							<option value="toutes">Toutes</option> 
+    						<option data-th-each= "item : ${categorieEnSession}" 
+    						data-th-value = "${item.noCategorie}"
+    						data-th-text = "${item.libelle}">  
+							</option> 
+    				</select> 
+   			    		
+    			<button id="Rechercher" type="submit">Rechercher</button>
+  			</form>
+  			
+  			<div data-th-each = "article : ${articles}">
+  				<img class="article_image" 
+  				data-th-src="@{/images/{image}(image=${article.image})}" 
+  				data-th-alt="Image de + ${article.nomArticle}"/>
+  				<a href="@{/view-detail-article(id=${article.noArticle})}" 
+  					data-th-text ="${article.nomArticle}"></a>
+  				<p>Prix : <span data-th-text = "${article.prixVente}"></span></p>
+  				<p>Fin de l'enchère : <span data-th-text="${article.dateFinEncheres}"></span></p>
+  				<p>Vendeur : <span data-th-text = "${article.utilisateur.pseudo}"></span></p>
+  			</div>
+  			
+  			
+<!--   			<div> -->
+<!--   				<img class="article_image" src="/images/article_2.png" alt="Image d'un pc"/> -->
+<!--   				<a href="/view-detail-article">PC Gamer</a> -->
+<!--   				<p>Prix : 210 points</p> -->
+<!--   				<p>Fin de l'enchère : 01/10/2024</p> -->
+<!--   				<p>Vendeur : Rico35 </p> -->
+<!--   			</div> -->
+  			<!-- SI AFFICHAGE DES ARTICLES SOUS FORME DE LISTE -->
+  			
+<!--   		<ul data-th-each="article : ${articles}">  -->
+<!--  			<li><a href="/view-detail-article" data-th-href="@{/vente/detail(id=${article.no_article})}" data-th-text="${article.nomArticle}"></a></li>	  -->
+<!--  			<li data-th-text="${article.prixVente}"></li>	  -->
+<!-- 			<li data-th-text="${article.dateFinEncheres}"></li>	  -->
+<!-- 			<li data-th-text="${article.utilisateur.pseudo}"></li>	  -->
+<!--  		</ul>  -->
+
+
+ </main> 
+</body>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 </html>

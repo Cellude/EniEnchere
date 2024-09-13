@@ -10,5 +10,7 @@ public interface ArticleManager {
 	public List<Article> consulterLesArticles();
 	public Article modifierArticle(Integer noArticle);
 	public void supprimerArticle(Article article);
-
+	public List<Article> consulterArticlesParLibelle(String libelleArticle);
+	List<Article> consulterArticlesParCategorie(Integer no_categorie);
+	public List<Article> afficherArticlesParNom(String nomArticle);
 }

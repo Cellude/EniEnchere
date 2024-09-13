@@ -21,11 +21,6 @@ public class UtilisateurController {
         this.utilisateurManager = utilisateurManager;
     }
 
-    // Affichage de la page index.html
-    @GetMapping("/")
-    public String index() { //;;;; TESTDELAVERSION HEHEZRH
-        return "index";  // Le nom de la vue sans l'extension .html
-    }
 
     // Affichage de la page de connexion
  // Affichage de la page de connexion

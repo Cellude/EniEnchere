@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	data-th-fragment="layout(titrePage, contenuPage,linkcss)">
+<head>
+<meta charset="UTF-8">
+<title data-th-replace="${titrePage}">ENI Enchères</title>
+<!-- <link rel="stylesheet" data-th-href="@{/css/general.css}"> -->
+
+<!-- <link data-th-replace="${linkcss}"> -->
+<!-- <link rel="icon" data-th-href="@{/images/logoENI.png}" sizes="32x32"> -->
+</head>
+<body>
+	<!-- Navbar -->
+	<header>
+		<nav>
+			<h1>ENI Enchères</h1>
+		</nav>
+	</header>
+	<main class="center-main" data-th-replace="${contenuPage}">Contenu
+		vide</main>
+	<footer style="text-align: center">© Team 2 - tous droits réservés</footer>
+</body>
+</html>

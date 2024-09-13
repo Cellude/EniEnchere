@@ -10,4 +10,7 @@ public interface ArticleDAO {
 	public List<Article> consulterArticles();
 	public Article modifierArticle(Integer noArticle);
 	public void supprimerArticle(Integer noArticle);
+	public List<Article> consulterArticlesParLibelle(String libelleArticle);
+	public List<Article> consulterArticlesParCategorie(Integer Categorie);
+
 }
